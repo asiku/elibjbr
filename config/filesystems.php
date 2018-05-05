@@ -43,6 +43,10 @@ return [
 
     'disks' => [
 
+      'pdfloc' => [
+          'driver' => 'local',
+          'root' => public_path('pdffiles'),
+      ],
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app'),

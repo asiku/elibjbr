@@ -23,7 +23,7 @@ class elibFrmRequest extends FormRequest
      */
     public function rules()
     {
-        return [
+        return ['pth' => 'required|file|mimes:pdf|max:20048'
             //
         ];
     }
