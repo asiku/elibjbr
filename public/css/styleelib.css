@@ -1,0 +1,91 @@
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /*background: #fafafa;*/
+}
+
+
+.img-b{
+width: 40px;
+height: 40px;
+padding: 5px;
+}
+
+.pull-c{
+  content: "";
+    clear: both;
+    display: table;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 30px 0;
+}
+.headertitle{
+  text-align: center;
+  /*padding-top: 5px;
+  padding-bottom: 5px;*/
+height: 40px;
+color:#645873;
+content: "";
+  clear: both;
+  display: table;
+}
+
+/*@font-face {
+  font-family: 'Ostrich Sans';
+  src: url('{{ asset('font/OstrichSans-Black.otf') }}');
+}*/
+.dlogin{
+  width: 400px;
+  height: 320px;
+  margin-top: 100px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+border-radius: 6px;
+transition: box-shadow 0.3s ease, border 0.3s; ease;
+box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+}
+
+.logcolor{
+color: #fff;
+background: #333333;
+}
+.square-card:hover {
+	box-shadow: 2px 4px 8px 0px rgba(46,61,73,0.2);
+	border: none;
+}
+.square-card {
+	margin-left: auto;
+	margin-right: auto;
+
+/* 	height: 22.5rem; */
+	border-radius: 6px;
+	background: #fff;
+	text-align: left;
+	position: relative;
+	transition: box-shadow 0.3s ease, border 0.3s; ease;
+	box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
+/* 	border-radius: 6px; */
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+
+.imgico{
+  width: 18px;
+  height: 18px;
+}
+
+ul{
+list-style:none;
+
+}
+.d-isi{
+
+
+}
