@@ -66,10 +66,11 @@ Route::post('elogin','elibController@ceklogin');
 Route::get('/', 'elibController@vlogin');
 
 Route::get('elib','elibController@elibIndex');
+Route::get('elibadmin','elibController@elibIndexadmin');
 
 // ==============routeRPA
 Route::get('frminputRPA','elibControllerRPA@frmRPA')->name('frminputRPA');
 Route::get('loginRPA','elibControllerRPA@vloginRPA');
 Route::post('eloginRPA','elibControllerRPA@cekloginfrm');
 Route::post('uploadpdf','elibControllerRPA@savepdf');
-Route::get('logoutRPA','elibController@DashviewoutRPA');
+Route::get('logoutRPA','elibControllerRPA@DashviewoutRPA');

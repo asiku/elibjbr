@@ -43,14 +43,23 @@
 <div class="col-sm-9 col-md-6 col-lg-8 ">
   <div  class="d-isi card square-card" >
     <!--  -->
-    <div class="tab-content" id="nav-tabContent">
-      <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
-        <?php echo $__env->make('elibfrmdashrpa', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-      </div>
-      <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
-          <?php echo $__env->make('elibfrmkatrpa', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-      </div>
 
+    <div class="card" >
+      <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+      <div class="card-body">
+        <h5 class="card-title">Input Data File</h5>
+
+        <div class="tab-content" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="list-home" role="tabpanel" aria-labelledby="list-home-list">
+            <?php echo $__env->make('elibfrmdashrpa', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          </div>
+          <div class="tab-pane fade" id="list-profile" role="tabpanel" aria-labelledby="list-profile-list">
+              <?php echo $__env->make('elibfrmkatrpa', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+          </div>
+
+        </div>
+
+      </div>
     </div>
   </div>
 </div>

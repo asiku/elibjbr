@@ -7,6 +7,7 @@ body {
 }
 
 
+
 .img-b{
 width: 40px;
 height: 40px;
@@ -76,9 +77,15 @@ background: #333333;
 	margin-top: 20px;
 }
 
+.posisi{
+  vertical-align: top;
+  display: inline-block;
+}
 .imgico{
   width: 18px;
   height: 18px;
+  vertical-align: top;
+  display: inline-block;
 }
 
 ul{

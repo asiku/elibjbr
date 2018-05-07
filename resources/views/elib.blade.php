@@ -7,6 +7,7 @@
 <div class="row">
 
 <div class="col-lg-12">
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <a class="navbar-brand" href="#">E-Library Jambu Raya</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,9 +16,9 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a class="nav-link" href={{url('elib')}}>Home <span class="sr-only">(current)</span></a>
-      </li>
+      </li> -->
       <li class="nav-item">
         <a class="nav-link" href={{url('logout')}}>Logout</a>
       </li>
@@ -49,50 +50,28 @@
 @if (!empty($kategory_list))
 <ul class="list-group">
 <button type="button" class="list-group-item list-group-item-action active">
-Divisi  
+
+Divisi
+
 @if (session('status'))
 
         {{ session('status') }}
 
 @endif
 </button>
-<?php  foreach($kategory_list as $kategory): ?>
-    <li class="list-group-item">
+
+<!-- @if(session('status')=='Admin')
+  @include('elibadmin')
+@else -->
+  @include('elibdivisi')
+<!-- @endif -->
 
 
-      <div class="">
-        <div id="accordion">
-  <!-- <div class="card"> -->
-    <!-- <div class="card-header" id="headingOne"> -->
-      <h5 class="mb-0">
-        <button class="btn btn-link" data-toggle="collapse" data-target="#p{{$kategory->id_perpus}}" aria-expanded="true" aria-controls="{{$kategory->id_perpus}}">
-          <img class="imgico" src="{{asset('gbr/folder.svg')}}" alt="">  {{$kategory->kategory}}
-        </button>
-      </h5>
-    <!-- </div> -->
 
-    <div id="p{{$kategory->id_perpus}}" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-      <div id="isi_{{$kategory->id_perpus}}">
-      <ul>
-        <?php  foreach(App\Http\Controllers\elibController::tes($kategory->kategory) as $filelst): ?>
-                <li id="{{App\Http\Controllers\elibController::angka($kategory->id_perpus)}}">   <img class="imgico" src="{{asset('gbr/pdf.svg')}}" alt="">
-                {{$filelst->pth}}  </li>
-        <?php endforeach ?>
-      </ul>
-      </div>
-    </div>
-
-  <!-- </div> -->
-
-</div>
-</div>
-
-
-    </li>
-
-
-<?php endforeach ?>
 </ul>
+
+
+
 @endif
 </div>
 </div>

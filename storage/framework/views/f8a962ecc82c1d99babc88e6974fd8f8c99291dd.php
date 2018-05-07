@@ -10,9 +10,18 @@
       <?php echo e(csrf_field()); ?>
 
 
+      <div class="form-group" >
+        <?php  foreach($divisi_list as $divisi): ?>
+              <input type="hidden" class="form-control" id="id_divisi" name="id_divisi" value="<?php echo e($divisi->id_divisi); ?>" required>
+        <?php endforeach ?>
+
+
+      </div>
+
       <div class="form-group">
       <label for="user" class="col-form-label">Divisi</label>
       <select class="custom-select" id="usernm" name="usernm" required>
+          <option value="">Pilih Salah Satu Divisi</option>
         <?php if(!empty($divisi_list)): ?>
         <?php  foreach($divisi_list as $divisi): ?>
             <option value=<?php echo e($divisi->divisi); ?>><?php echo e($divisi->divisi); ?></option>
@@ -40,4 +49,4 @@
 
 <?php $__env->stopSection(); ?>
 
-<?php echo $__env->make('templateelib', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('templateelibdashRPA', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>

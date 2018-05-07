@@ -12,8 +12,24 @@
       {{ csrf_field() }}
 
       <div class="form-group">
+      <label for="cabang" class="col-form-label">Cabang</label>
+      <select class="custom-select" id="id_cabang" name="id_cabang" required>
+
+        @if (!empty($cabang_list))
+        <?php  foreach($cabang_list as $cabang): ?>
+            <option value={{$cabang->id_cabang}}>{{$cabang->cabang}}</option>
+        <?php endforeach ?>
+
+        @endif
+      </select>
+      <div class="invalid-feedback">Anda Belum memilih Cabang!</div>
+    </div>
+
+
+      <div class="form-group">
       <label for="user" class="col-form-label">Divisi</label>
       <select class="custom-select" id="usernm" name="usernm" required>
+
         @if (!empty($divisi_list))
         <?php  foreach($divisi_list as $divisi): ?>
             <option value={{$divisi->divisi}}>{{$divisi->divisi}}</option>
